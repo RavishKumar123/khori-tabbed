@@ -14,7 +14,9 @@ class RecentlyBhajansCollectionViewCell: UICollectionViewCell {
     
     @IBOutlet weak var recentyBhajanButton: UIButton!
     @IBAction func recentyBhajanButtonAction(_ sender: Any) {
-        print((sender as AnyObject).tag)
+        
+       
+        
     }
 }
 

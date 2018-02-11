@@ -24,128 +24,133 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="KIu-Xm-s44" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1913" y="332"/>
+            <point key="canvasLocation" x="1982" y="808"/>
         </scene>
         <!--Khori Darbar Sahib-->
         <scene sceneID="3At-W2-8if">
             <objects>
                 <viewController id="yFR-8y-aeH" customClass="FirstViewController" customModule="tabbed" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="YgL-an-0u8">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="1250"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7LC-zO-gff" customClass="ImageSlideshow" customModule="ImageSlideshow">
-                                <rect key="frame" x="7" y="76" width="306" height="156"/>
-                                <color key="backgroundColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="10"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Recently Added" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bir-0n-IFW">
-                                <rect key="frame" x="7" y="240" width="121" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZGU-78-5za">
-                                <rect key="frame" x="7" y="269" width="306" height="151"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="151" id="efg-M6-9Jp"/>
-                                </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MnH-Fq-VTQ">
-                                    <size key="itemSize" width="120" height="140"/>
-                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
-                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
-                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
-                                </collectionViewFlowLayout>
-                                <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recentBhajans" id="4ac-Yf-sD6" customClass="RecentlyBhajansCollectionViewCell" customModule="tabbed" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="5.5" width="120" height="140"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCR-Cu-p7o">
-                                                    <rect key="frame" x="0.0" y="119" width="120" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="843-mn-wJc">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="103"/>
-                                                    <state key="normal" title="Button" image="img1"/>
-                                                    <connections>
-                                                        <action selector="recentyBhajanButtonAction:" destination="4ac-Yf-sD6" eventType="touchUpInside" id="2Zz-xy-a3w"/>
-                                                    </connections>
-                                                </button>
-                                            </subviews>
-                                        </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xL9-6d-9e0">
+                                <rect key="frame" x="0.0" y="64" width="320" height="1137"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Ly-pn-R9s">
+                                        <rect key="frame" x="0.0" y="0.0" width="320" height="1250"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7LC-zO-gff" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                                                <rect key="frame" x="0.0" y="0.0" width="320" height="156"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.66666668650000005" green="0.66666668650000005" blue="0.66666668650000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                            </view>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZGU-78-5za">
+                                                <rect key="frame" x="0.0" y="193" width="320" height="151"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="MnH-Fq-VTQ">
+                                                    <size key="itemSize" width="120" height="140"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="recentBhajans" id="4ac-Yf-sD6" customClass="RecentlyBhajansCollectionViewCell" customModule="tabbed" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="5.5" width="120" height="140"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                                            <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
+                                                            <autoresizingMask key="autoresizingMask"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCR-Cu-p7o">
+                                                                    <rect key="frame" x="0.0" y="119" width="120" height="21"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="843-mn-wJc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="103"/>
+                                                                    <state key="normal" title="Button" image="img1"/>
+                                                                    <connections>
+                                                                        <action selector="recentyBhajanButtonAction:" destination="4ac-Yf-sD6" eventType="touchUpInside" id="2Zz-xy-a3w"/>
+                                                                    </connections>
+                                                                </button>
+                                                            </subviews>
+                                                        </view>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="JCR-Cu-p7o" secondAttribute="bottom" id="5PV-Aa-98A"/>
+                                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="leading" secondItem="843-mn-wJc" secondAttribute="leading" id="KYS-WA-ux8"/>
+                                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="top" secondItem="843-mn-wJc" secondAttribute="bottom" constant="8" symbolic="YES" id="LFg-9H-MWb"/>
+                                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="trailing" secondItem="843-mn-wJc" secondAttribute="trailing" id="MoA-6T-t1D"/>
+                                                            <constraint firstAttribute="trailing" secondItem="JCR-Cu-p7o" secondAttribute="trailing" id="dc3-FZ-sWb"/>
+                                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="leading" secondItem="4ac-Yf-sD6" secondAttribute="leading" id="heC-Ic-E2r"/>
+                                                        </constraints>
+                                                        <connections>
+                                                            <outlet property="recentLabel" destination="JCR-Cu-p7o" id="plj-ta-aop"/>
+                                                            <outlet property="recentyBhajanButton" destination="843-mn-wJc" id="i9V-gG-UJg"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <userDefinedRuntimeAttributes>
+                                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                        <integer key="value" value="0"/>
+                                                    </userDefinedRuntimeAttribute>
+                                                </userDefinedRuntimeAttributes>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="yFR-8y-aeH" id="d9O-a4-QV3"/>
+                                                    <outlet property="delegate" destination="yFR-8y-aeH" id="wo7-hK-DGt"/>
+                                                </connections>
+                                            </collectionView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Recently Added Bhajans" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Re5-rV-gqg">
+                                                <rect key="frame" x="8" y="169" width="186" height="21"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNY-We-ihE" customClass="Sticked" customModule="tabbed" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="997" width="320" height="94"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
-                                            <constraint firstAttribute="bottom" secondItem="JCR-Cu-p7o" secondAttribute="bottom" id="5PV-Aa-98A"/>
-                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="leading" secondItem="843-mn-wJc" secondAttribute="leading" id="KYS-WA-ux8"/>
-                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="top" secondItem="843-mn-wJc" secondAttribute="bottom" constant="8" symbolic="YES" id="LFg-9H-MWb"/>
-                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="trailing" secondItem="843-mn-wJc" secondAttribute="trailing" id="MoA-6T-t1D"/>
-                                            <constraint firstAttribute="trailing" secondItem="JCR-Cu-p7o" secondAttribute="trailing" id="dc3-FZ-sWb"/>
-                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="leading" secondItem="4ac-Yf-sD6" secondAttribute="leading" id="heC-Ic-E2r"/>
+                                            <constraint firstAttribute="height" constant="1250" id="Xin-TH-93b"/>
                                         </constraints>
-                                        <connections>
-                                            <outlet property="recentLabel" destination="JCR-Cu-p7o" id="plj-ta-aop"/>
-                                            <outlet property="recentyBhajanButton" destination="843-mn-wJc" id="i9V-gG-UJg"/>
-                                        </connections>
-                                    </collectionViewCell>
-                                </cells>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <integer key="value" value="13"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <outlet property="dataSource" destination="yFR-8y-aeH" id="d9O-a4-QV3"/>
-                                    <outlet property="delegate" destination="yFR-8y-aeH" id="wo7-hK-DGt"/>
-                                </connections>
-                            </collectionView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2nm-1v-uAP">
-                                <rect key="frame" x="0.0" y="428" width="320" height="1"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                </subviews>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="1" id="ONg-jX-xSt"/>
+                                    <constraint firstAttribute="trailing" secondItem="7Ly-pn-R9s" secondAttribute="trailing" id="9ed-go-JFd"/>
+                                    <constraint firstItem="7Ly-pn-R9s" firstAttribute="leading" secondItem="xL9-6d-9e0" secondAttribute="leading" id="UNb-LW-KOW"/>
+                                    <constraint firstItem="7Ly-pn-R9s" firstAttribute="top" secondItem="xL9-6d-9e0" secondAttribute="top" id="eLU-ea-EI0"/>
+                                    <constraint firstAttribute="bottom" secondItem="7Ly-pn-R9s" secondAttribute="bottom" id="fIo-ix-SXf"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRm-Ik-2Ht">
-                                <rect key="frame" x="7" y="428" width="121" height="91"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button" image="img1"/>
-                            </button>
+                            </scrollView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="2nm-1v-uAP" firstAttribute="centerX" secondItem="ZGU-78-5za" secondAttribute="centerX" id="JrW-XP-9rq"/>
-                            <constraint firstItem="2nm-1v-uAP" firstAttribute="top" secondItem="ZGU-78-5za" secondAttribute="bottom" constant="8" symbolic="YES" id="PDZ-si-Z16"/>
-                            <constraint firstItem="ZGU-78-5za" firstAttribute="leading" secondItem="7LC-zO-gff" secondAttribute="leading" id="PWX-na-dOx"/>
-                            <constraint firstItem="ZGU-78-5za" firstAttribute="leading" secondItem="w8H-Ct-8LO" secondAttribute="leading" constant="7" id="VEe-GL-KeA"/>
-                            <constraint firstItem="7LC-zO-gff" firstAttribute="top" secondItem="w8H-Ct-8LO" secondAttribute="top" constant="12" id="ZEX-Ko-p5R"/>
-                            <constraint firstItem="ZGU-78-5za" firstAttribute="top" secondItem="bir-0n-IFW" secondAttribute="bottom" constant="8" symbolic="YES" id="buW-1K-Jqw"/>
-                            <constraint firstItem="bir-0n-IFW" firstAttribute="top" secondItem="7LC-zO-gff" secondAttribute="bottom" constant="8" symbolic="YES" id="h9j-Qs-UH9"/>
-                            <constraint firstItem="2nm-1v-uAP" firstAttribute="top" secondItem="ZGU-78-5za" secondAttribute="bottom" constant="8" id="jhs-cj-eNI"/>
-                            <constraint firstItem="2nm-1v-uAP" firstAttribute="centerX" secondItem="7LC-zO-gff" secondAttribute="centerX" id="kaS-lM-MXs"/>
-                            <constraint firstItem="w8H-Ct-8LO" firstAttribute="bottom" secondItem="2nm-1v-uAP" secondAttribute="bottom" constant="90" id="nrR-Gg-uL7"/>
-                            <constraint firstItem="ZGU-78-5za" firstAttribute="leading" secondItem="bir-0n-IFW" secondAttribute="leading" id="oWQ-Vp-Fiq"/>
-                            <constraint firstAttribute="trailing" secondItem="2nm-1v-uAP" secondAttribute="trailing" id="qPo-IA-1Vs"/>
-                            <constraint firstItem="2nm-1v-uAP" firstAttribute="leading" secondItem="YgL-an-0u8" secondAttribute="leading" id="w71-pn-emO"/>
+                            <constraint firstItem="xL9-6d-9e0" firstAttribute="top" secondItem="w8H-Ct-8LO" secondAttribute="top" id="3nn-kH-PSy"/>
+                            <constraint firstItem="xL9-6d-9e0" firstAttribute="leading" secondItem="w8H-Ct-8LO" secondAttribute="leading" id="4Af-pE-QTO"/>
+                            <constraint firstItem="xL9-6d-9e0" firstAttribute="trailing" secondItem="w8H-Ct-8LO" secondAttribute="trailing" id="UN4-lj-A3d"/>
+                            <constraint firstItem="xL9-6d-9e0" firstAttribute="bottom" secondItem="w8H-Ct-8LO" secondAttribute="bottom" id="rI3-2B-112"/>
+                            <constraint firstItem="7Ly-pn-R9s" firstAttribute="width" secondItem="YgL-an-0u8" secondAttribute="width" id="si9-gA-2Lt"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="w8H-Ct-8LO"/>
                     </view>
                     <navigationItem key="navigationItem" title="Khori Darbar Sahib" id="SNY-7L-KQ7"/>
+                    <size key="freeformSize" width="320" height="1250"/>
                     <connections>
                         <outlet property="collectionView" destination="ZGU-78-5za" id="MGV-8w-NLc"/>
                         <outlet property="imageSlideShow" destination="7LC-zO-gff" id="lM9-yC-MDD"/>
+                        <outlet property="stickeds" destination="YNY-We-ihE" id="TCI-zg-guj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4G-BR-lIO" userLabel="First Responder" sceneMemberID="firstResponder"/>
