@@ -29,9 +29,10 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recentBhajans", for: indexPath) as! RecentlyBhajansCollectionViewCell
-        cell.recentImage.image = UIImage(named: "img2")
+     
         let user = recentBhajanArray[(recentBhajanArray.count - 1) - indexPath.row]
         cell.recentLabel.text = user.bhajanName
+        cell.recentyBhajanButton.tag = indexPath.row
  
         return cell
     }

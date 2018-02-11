@@ -6,7 +6,6 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -70,29 +69,32 @@
                                             <rect key="frame" x="0.0" y="0.0" width="120" height="140"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8dS-Fg-thg">
-                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="120"/>
-                                                </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JCR-Cu-p7o">
                                                     <rect key="frame" x="0.0" y="119" width="120" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="843-mn-wJc">
+                                                    <rect key="frame" x="0.0" y="0.0" width="120" height="103"/>
+                                                    <state key="normal" title="Button" image="img1"/>
+                                                    <connections>
+                                                        <action selector="recentyBhajanButtonAction:" destination="4ac-Yf-sD6" eventType="touchUpInside" id="2Zz-xy-a3w"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="8dS-Fg-thg" firstAttribute="leading" secondItem="JCR-Cu-p7o" secondAttribute="leading" id="0X9-jB-YOu"/>
                                             <constraint firstAttribute="bottom" secondItem="JCR-Cu-p7o" secondAttribute="bottom" id="5PV-Aa-98A"/>
-                                            <constraint firstItem="8dS-Fg-thg" firstAttribute="trailing" secondItem="JCR-Cu-p7o" secondAttribute="trailing" id="IQ3-EP-0sv"/>
-                                            <constraint firstItem="8dS-Fg-thg" firstAttribute="top" secondItem="4ac-Yf-sD6" secondAttribute="top" id="ULy-xy-Gea"/>
-                                            <constraint firstItem="8dS-Fg-thg" firstAttribute="leading" secondItem="4ac-Yf-sD6" secondAttribute="leading" id="a9C-1A-c2n"/>
-                                            <constraint firstAttribute="bottomMargin" secondItem="8dS-Fg-thg" secondAttribute="bottom" constant="20" id="tKH-vV-jXq"/>
-                                            <constraint firstAttribute="trailing" secondItem="8dS-Fg-thg" secondAttribute="trailing" id="vPa-GV-qfr"/>
+                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="leading" secondItem="843-mn-wJc" secondAttribute="leading" id="KYS-WA-ux8"/>
+                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="top" secondItem="843-mn-wJc" secondAttribute="bottom" constant="8" symbolic="YES" id="LFg-9H-MWb"/>
+                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="trailing" secondItem="843-mn-wJc" secondAttribute="trailing" id="MoA-6T-t1D"/>
+                                            <constraint firstAttribute="trailing" secondItem="JCR-Cu-p7o" secondAttribute="trailing" id="dc3-FZ-sWb"/>
+                                            <constraint firstItem="JCR-Cu-p7o" firstAttribute="leading" secondItem="4ac-Yf-sD6" secondAttribute="leading" id="heC-Ic-E2r"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="recentImage" destination="8dS-Fg-thg" id="TFO-Py-nlB"/>
                                             <outlet property="recentLabel" destination="JCR-Cu-p7o" id="plj-ta-aop"/>
+                                            <outlet property="recentyBhajanButton" destination="843-mn-wJc" id="i9V-gG-UJg"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -116,6 +118,11 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TRm-Ik-2Ht">
+                                <rect key="frame" x="7" y="428" width="121" height="91"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button" image="img1"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -209,10 +216,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="F2d-jA-Z5X"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5cH-4D-7FQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
     </scenes>
+    <resources>
+        <image name="img1" width="1080" height="720"/>
+    </resources>
 </document>
