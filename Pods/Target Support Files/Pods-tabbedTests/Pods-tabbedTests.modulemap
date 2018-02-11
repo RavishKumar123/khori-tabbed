@@ -1,0 +1,6 @@
+framework module Pods_tabbedTests {
+  umbrella header "Pods-tabbedTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
