@@ -78,7 +78,7 @@
                                                                     <rect key="frame" x="0.0" y="0.0" width="120" height="103"/>
                                                                     <state key="normal" title="Button" image="img1"/>
                                                                     <connections>
-                                                                        <action selector="recentyBhajanButtonAction:" destination="4ac-Yf-sD6" eventType="touchUpInside" id="2Zz-xy-a3w"/>
+                                                                        <action selector="show:" destination="yFR-8y-aeH" eventType="touchUpInside" id="ntp-fx-zrY"/>
                                                                     </connections>
                                                                 </button>
                                                             </subviews>
@@ -114,12 +114,6 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="YNY-We-ihE" customClass="Sticked" customModule="tabbed" customModuleProvider="target">
-                                                <rect key="frame" x="0.0" y="997" width="320" height="94"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                <color key="backgroundColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                <color key="tintColor" red="0.0" green="0.97680455450000003" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                            </view>
                                         </subviews>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                         <constraints>
@@ -150,7 +144,6 @@
                     <connections>
                         <outlet property="collectionView" destination="ZGU-78-5za" id="MGV-8w-NLc"/>
                         <outlet property="imageSlideShow" destination="7LC-zO-gff" id="lM9-yC-MDD"/>
-                        <outlet property="stickeds" destination="YNY-We-ihE" id="TCI-zg-guj"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="w4G-BR-lIO" userLabel="First Responder" sceneMemberID="firstResponder"/>

@@ -9,13 +9,14 @@
 import UIKit
 import ImageSlideshow
 import Firebase
+import FontAwesome_swift
 
 
 class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
 
     
     
-    @IBOutlet weak var stickeds: Sticked!
+
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var imageSlideShow: ImageSlideshow!
     var recentBhajanArray = [Recent]()
@@ -24,7 +25,7 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         super.viewDidLoad()
         retrieveRecentAddedBhajans()
         imagesliderShow()
-        stickeds.isHidden = true
+  
         
     }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -35,12 +36,9 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "recentBhajans", for: indexPath) as! RecentlyBhajansCollectionViewCell
-     
         let user = recentBhajanArray[(recentBhajanArray.count - 1) - indexPath.row]
         cell.recentLabel.text = user.bhajanName
         cell.recentyBhajanButton.tag = indexPath.row
-        
- 
         return cell
     }
 
@@ -85,17 +83,22 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         //        let recognizer = UITapGestureRecognizer(target: self, action: #selector(ViewController.didTap))
         //        slideshow.addGestureRecognizer(recognizer)
     }
-    func starts(){
-//        let view = UIView(frame: CGRect(x: 0, y: self.view.frame.height - 99, width: self.view.frame.width, height: 50))
-//        view.backgroundColor = UIColor(red: 0, green: 88/255, blue: 171/255, alpha: 1)
-//        var button = UIButton(frame: CGRect(x:0,y:0,width:100,height:20))
-//        button.backgroundColor = UIColor(red: 1, green: 88/255, blue: 171/255, alpha: 1)
-//        button.setTitle("Home",for:.normal)
-//        self.navigationController?.view.addSubview(view)
-        
+    func displayPlayerXib(){
+        if let playerXib = Bundle.main.loadNibNamed("Player", owner: self, options: nil)?.first as? Player{
+            playerXib.frame = CGRect(x: 0, y: self.view.frame.height - 100, width: self.view.frame.width, height: 50)
+            playerXib.c.titleLabel?.font = UIFont.fontAwesome(ofSize: 30)
+            playerXib.c.setTitle(String.fontAwesomeIcon(name: .close), for: .normal)
+            playerXib.play.titleLabel?.font = UIFont.fontAwesome(ofSize: 30)
+            playerXib.play.setTitle(String.fontAwesomeIcon(name: .play), for: .normal)
+            
+            self.navigationController?.view.addSubview(playerXib)
+        }
+    }
+ 
+    @IBAction func show(_ sender: UIButton) {
+     displayPlayerXib()
     }
     
-
 }
 
 

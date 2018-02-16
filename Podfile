@@ -11,6 +11,7 @@ target 'tabbed' do
   pod 'Firebase/Database'
   pod 'Firebase/Auth'
   pod 'SVProgressHUD'
+  pod 'FontAwesome.swift'
 
   target 'tabbedTests' do
     inherit! :search_paths

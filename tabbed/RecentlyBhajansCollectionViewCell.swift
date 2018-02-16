@@ -8,15 +8,11 @@
 
 import UIKit
 
-class RecentlyBhajansCollectionViewCell: UICollectionViewCell {
+
+class RecentlyBhajansCollectionViewCell: UICollectionViewCell{
 
     @IBOutlet weak var recentLabel: UILabel!
-    
     @IBOutlet weak var recentyBhajanButton: UIButton!
-    @IBAction func recentyBhajanButtonAction(_ sender: Any) {
-        
-       
-        
-    }
+
 }
 

@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		041538B5202E154200B411FD /* RecentlyBhajansCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 041538B4202E154200B411FD /* RecentlyBhajansCollectionViewCell.swift */; };
 		042AAD582030418300F722AE /* Recents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 042AAD572030418300F722AE /* Recents.swift */; };
+		04311D4E2037570A00920BF8 /* Player.xib in Resources */ = {isa = PBXBuildFile; fileRef = 04311D4D2037570A00920BF8 /* Player.xib */; };
+		04311D502037575300920BF8 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04311D4F2037575300920BF8 /* Player.swift */; };
 		0467A7E6202A514F0053E585 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467A7E5202A514F0053E585 /* AppDelegate.swift */; };
 		0467A7E8202A514F0053E585 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467A7E7202A514F0053E585 /* FirstViewController.swift */; };
 		0467A7EA202A514F0053E585 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0467A7E9202A514F0053E585 /* SecondViewController.swift */; };
@@ -45,6 +47,8 @@
 /* Begin PBXFileReference section */
 		041538B4202E154200B411FD /* RecentlyBhajansCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentlyBhajansCollectionViewCell.swift; sourceTree = "<group>"; };
 		042AAD572030418300F722AE /* Recents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recents.swift; sourceTree = "<group>"; };
+		04311D4D2037570A00920BF8 /* Player.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Player.xib; sourceTree = "<group>"; };
+		04311D4F2037575300920BF8 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
 		0467A7E2202A514F0053E585 /* tabbed.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tabbed.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0467A7E5202A514F0053E585 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0467A7E7202A514F0053E585 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
@@ -138,6 +142,8 @@
 				04AA12F1202F2AD400AB35D4 /* Recent.swift */,
 				042AAD572030418300F722AE /* Recents.swift */,
 				048A9D432030DB050096E4D4 /* Sticked.swift */,
+				04311D4D2037570A00920BF8 /* Player.xib */,
+				04311D4F2037575300920BF8 /* Player.swift */,
 			);
 			path = tabbed;
 			sourceTree = "<group>";
@@ -303,6 +309,7 @@
 				04E40101202ECB2800051C51 /* GoogleService-Info.plist in Resources */,
 				0467A7EF202A514F0053E585 /* Assets.xcassets in Resources */,
 				0467A7ED202A514F0053E585 /* Main.storyboard in Resources */,
+				04311D4E2037570A00920BF8 /* Player.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -363,6 +370,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-tabbed/Pods-tabbed-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/FontAwesome.swift/FontAwesome_swift.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleToolboxForMac/GoogleToolboxForMac.framework",
 				"${BUILT_PRODUCTS_DIR}/ImageSlideshow/ImageSlideshow.framework",
@@ -372,6 +380,7 @@
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FontAwesome_swift.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleToolboxForMac.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ImageSlideshow.framework",
@@ -491,6 +500,7 @@
 				0467A7E6202A514F0053E585 /* AppDelegate.swift in Sources */,
 				041538B5202E154200B411FD /* RecentlyBhajansCollectionViewCell.swift in Sources */,
 				04AA12F2202F2AD400AB35D4 /* Recent.swift in Sources */,
+				04311D502037575300920BF8 /* Player.swift in Sources */,
 				042AAD582030418300F722AE /* Recents.swift in Sources */,
 				048A9D442030DB050096E4D4 /* Sticked.swift in Sources */,
 				0467A7E8202A514F0053E585 /* FirstViewController.swift in Sources */,
