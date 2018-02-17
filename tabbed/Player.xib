@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="Player" customModule="tabbed" customModuleProvider="target">
+        <view tag="100" contentMode="scaleToFill" id="iN0-l3-epB" customClass="Player" customModule="tabbed" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="50"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -20,6 +20,9 @@
                     <rect key="frame" x="274" y="10" width="46" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="closeAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="6Bz-LP-3BX"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Beat Pe booty.mp3" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7cp-QP-vK2">
                     <rect key="frame" x="54" y="15" width="212" height="21"/>
@@ -32,6 +35,9 @@
                     <rect key="frame" x="0.0" y="10" width="46" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Button"/>
+                    <connections>
+                        <action selector="playAction:" destination="iN0-l3-epB" eventType="touchUpInside" id="pl9-KZ-Arj"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" red="0.57045853140000002" green="0.57047235969999999" blue="0.57046490910000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -42,7 +48,7 @@
                 <outlet property="play" destination="cxw-6k-hqg" id="lfY-M4-kCx"/>
                 <outlet property="songName" destination="7cp-QP-vK2" id="fFL-nc-eEe"/>
             </connections>
-            <point key="canvasLocation" x="10" y="8"/>
+            <point key="canvasLocation" x="1112" y="59"/>
         </view>
     </objects>
 </document>

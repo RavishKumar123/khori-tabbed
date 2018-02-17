@@ -22,5 +22,19 @@ class Player: UIView {
     @IBOutlet weak var songName: UILabel!
     @IBOutlet weak var play: UIButton!
     @IBOutlet weak var c: UIButton!
+    @IBAction func closeAction(_ sender: Any) {
+    self.isHidden = true
+    }
+    func close(){
+        self.isHidden = true
+    }
+
+    @IBAction func playAction(_ sender: Any) {
+        let f1 = FirstViewController()
+        f1.Playpause()
+        
+    }
+    
+    
     
 }
