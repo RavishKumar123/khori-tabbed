@@ -14,14 +14,11 @@ import AVFoundation
 
 
 class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
-
-    
-    
-
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var imageSlideShow: ImageSlideshow!
     let playerRef = Player()
     var playerActive = false
+    var isPlaying = false
     var playerXib = Bundle.main.loadNibNamed("Player", owner: self, options: nil)?.first as? Player
     //var player:AVAudioPlayer!
     var recentBhajanArray = [Recent]()
@@ -114,12 +111,36 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
         playerXib?.c.titleLabel?.font = UIFont.fontAwesome(ofSize: 30)
         playerXib?.c.setTitle(String.fontAwesomeIcon(name: .close), for: .normal)
         playerXib?.play.titleLabel?.font = UIFont.fontAwesome(ofSize: 30)
-        playerXib?.play.setTitle(String.fontAwesomeIcon(name: .play), for: .normal)
+        playerXib?.play.setTitle(String.fontAwesomeIcon(name: .pause), for: .normal)
             let user = recentBhajanArray[(recentBhajanArray.count - 1) - bhajanIndex]
         playerXib?.songName.text = user.bhajanName
+        playerXib?.play.addTarget(self, action: #selector(self.playPause(_:)), for: .touchUpInside);
+        playerXib?.c.addTarget(self, action: #selector(self.close(_:)), for: .touchUpInside);
         playBhajan(bhajanUrl: user.bhajanUrl!)
-        
+        isPlaying = true
         self.navigationController?.view.addSubview(playerXib!)
+        
+    }
+    @objc func close(_ sender : UIButton){
+        if let play = player {
+            print("stopped")
+            play.pause()
+            player = nil
+            print("player deallocated")
+        } else {
+            print("player was already deallocated")
+        }
+        playerXib?.close()
+    }
+    @objc func playPause(_ sender : UIButton){
+        isPlaying = !isPlaying
+        if(isPlaying){
+        player?.play()
+        playerXib?.play.setTitle(String.fontAwesomeIcon(name: .pause), for: .normal)
+        }else {
+            player?.pause()
+            playerXib?.play.setTitle(String.fontAwesomeIcon(name: .play), for: .normal)
+        }
         
     }
     @IBAction func show(_ sender: UIButton) {
