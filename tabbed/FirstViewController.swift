@@ -9,6 +9,7 @@
 import UIKit
 import ImageSlideshow
 import Firebase
+import AVFoundation
 
 class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectionViewDataSource {
     @IBOutlet weak var collectionView: UICollectionView!
@@ -69,10 +70,16 @@ class FirstViewController: UIViewController,UICollectionViewDelegate,UICollectio
     @IBAction func show(_ sender: UIButton) {
         playerXib?.close()
         playerXib = Bundle.main.loadNibNamed("Player", owner: self, options: nil)?.first as? Player
-        playerXib?.frame = CGRect(x: 0, y: self.view.frame.height - 100, width: self.view.frame.width, height: 50)
+        playerXib?.frame = CGRect(x: 0, y: self.view.frame.height - 120, width: self.view.frame.width, height: 75)
         playerXib?.recentBhajanArray = recentBhajanArray
         playerXib?.displayPlayerXib(bhajanIndex: sender.tag)
         self.navigationController?.view.addSubview(playerXib!)
+        
+    }
+    
+    @IBAction func testBtn(_ sender: Any) {
+        playerXib?.updateVideoPlayerSlider()
+        
     }
 }
 
